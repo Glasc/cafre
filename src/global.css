@@ -19,6 +19,6 @@ body {
 
 
 .app-container {
-  width: min(90%, 90rem);
+  width: min(90%, 80rem);
   margin: 0 auto;
 }

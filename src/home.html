@@ -8,81 +8,181 @@
   <title>Home</title>
   <link rel="stylesheet" href="../dist/output.css">
   <link rel="stylesheet" href="./global.css">
+
 </head>
 
 <body>
-  <div class="min-h-screen bg-base-100 space-y-10">
+  <div class="min-h-screen bg-base-100 space-y-12 relative">
     <!-- navbar starts -->
-    <nav class="app-container navbar bg-base-100 px-0 border-b border-base-200 drop-shadow-sm	">
-      <div class="navbar-start">
-        <div class="dropdown">
-          <label tabindex="0" class="btn btn-ghost lg:hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
-            </svg>
-          </label>
-          <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+    <div id="navbar-wrapper"
+      class="text-accent-content md:text-neutral-content border-b-2 border-transparent sticky top-0 z-30 ease-in duration-200">
+      <nav class="app-container navbar px-0 drop-shadow-sm">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <label tabindex="0" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
+            </label>
+            <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+              <li><a>Item 1</a></li>
+              <li tabindex="0">
+                <a class="justify-between">
+                  Parent
+                  <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24">
+                    <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+                  </svg>
+                </a>
+                <ul class="p-2">
+                  <li><a>Submenu 1</a></li>
+                  <li><a>Submenu 2</a></li>
+                </ul>
+              </li>
+              <li><a>Item 3</a></li>
+              <li><a>Historia</a></li>
+            </ul>
+          </div>
+          <a class="m-0 p-0 normal-case text-xl md:text-3xl font-semibold">Riviera Nayarit</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal p-0">
             <li><a>Item 1</a></li>
             <li tabindex="0">
-              <a class="justify-between">
+              <a>
                 Parent
-                <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                  <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+                <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                  <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
                 </svg>
               </a>
               <ul class="p-2">
-                <li><a>Submenu 1</a></li>
-                <li><a>Submenu 2</a></li>
+                <li class="bg-base-300 text-accent-content"><a>Submenu 1</a></li>
+                <li class="bg-base-300 text-accent-content"><a>Submenu 2</a></li>
               </ul>
             </li>
             <li><a>Item 3</a></li>
+            <li><a>Historia</a></li>
           </ul>
         </div>
-        <a class="m-0 p-0 normal-case text-xl md:text-3xl font-semibold whitespace-nowrap">Riviera Nayarit</a>
-      </div>
-      <div class="navbar-center hidden lg:flex">
-        <ul class="menu menu-horizontal p-0">
-          <li><a>Item 1</a></li>
-          <li tabindex="0">
-            <a>
-              Parent
-              <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-                <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
-              </svg>
-            </a>
-            <ul class="p-2">
-              <li><a>Submenu 1</a></li>
-              <li><a>Submenu 2</a></li>
-            </ul>
-          </li>
-          <li><a>Item 3</a></li>
-        </ul>
-      </div>
-      <div class="navbar-end">
-        <a class="btn btn-accent">Get started</a>
-      </div>
-    </nav>
+        <div class="navbar-end">
+          <a class="btn btn-accent">Get started</a>
+        </div>
+      </nav>
+    </div>
     <!-- navbar ends -->
 
-    <section
-      class="app-container space-y-5 grow grid items-center md:grid-cols-2 md:gap-x-5 text-center md:text-left justify-center">
-      
-      <article class="space-y-4 mx-auto max-w-7xl whites md:pr-10">
-        <h1 class="text-4xl md:text-6xl font-extrabold  capitalize text-base-content">The <span
+    <!-- hero starts -->
+    <header
+      class="app-container space-y-5 py-15 md:space-y-0 grow grid items-center md:grid-cols-2 md:gap-x-5 text-center md:text-left justify-center">
+
+      <article class="space-y-4 z-20 mx-auto max-w-7xl md:pr-14">
+        <h1 class="text-4xl lg:text-5xl lg:leading-tight font-extrabold capitalize text-accent-content">The <span
             class="underline">easieast</span> way to learn music production</h1>
-        <p class="text-lg font-medium text-neutral">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio iste
-          minima
-          saepe commodi amet.</p>
+        <p class="text-lg lg:text-xl lg:leading-relaxed font-normal text-base-content">Lorem ipsum dolor sit amet
+          consectetur
+          adipisicing elit. Minus aspernatur reiciendis aut, cum adipisci debitis aperiam odit doloremque ad ab.</p>
         <button class="btn md:btn-lg btn-primary block mx-auto md:inline">Join list</button>
       </article>
 
-      <article>
-        <img class="rounded-lg" src="../assets/playa.webp" alt="">
+      <article class="z-20">
+        <img class="rounded-lg drop-shadow-xl" src="../assets/playa.webp" alt="">
       </article>
 
+
+      <svg class="hidden md:block absolute top-0 left-0 right-0 mt-0 z-0" xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 320">
+        <path fill="#2aa79b" fill-opacity="0.85"
+          d="M0,288L48,256C96,224,192,160,288,149.3C384,139,480,181,576,181.3C672,181,768,139,864,122.7C960,107,1056,117,1152,133.3C1248,149,1344,171,1392,181.3L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+        </path>
+      </svg>
+    </header>
+    <!-- hero ends -->
+
+    <section class="bg-base-200 py-10">
+      <div class="app-container">
+        <h2 class="text-center text-4xl font-bold py-4">Explora la Riviera Nayarit</h2>
+        <ul class="flex flex-wrap gap-8 list-none mt-7 justify-between">
+
+          <li class="card card-compact w-96 bg-base-100 shadow-md rounded-lg">
+            <figure><img src="../assets/puntamita.jpg" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">Sayulita</h2>
+              <p>Suft, comodidad y compras.</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-neutral">Ver ahora</button>
+              </div>
+            </div>
+          </li>
+
+          <li class="card card-compact w-96 bg-base-100 shadow-md rounded-lg">
+            <figure><img src="../assets/puntamita.jpg" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">Sayulita</h2>
+              <p>Suft, comodidad y compras.</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-neutral">Ver ahora</button>
+              </div>
+            </div>
+          </li>
+
+          <li class="card card-compact w-96 bg-base-100 shadow-md rounded-lg">
+            <figure><img src="../assets/puntamita.jpg" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">Sayulita</h2>
+              <p>Suft, comodidad y compras.</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-neutral">Ver ahora</button>
+              </div>
+            </div>
+          </li>
+
+          <li class="card card-compact w-96 bg-base-100 shadow-md rounded-lg">
+            <figure><img src="../assets/puntamita.jpg" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">Sayulita</h2>
+              <p>Suft, comodidad y compras.</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-neutral">Ver ahora</button>
+              </div>
+            </div>
+          </li>
+
+          <li class="card card-compact w-96 bg-base-100 shadow-md rounded-lg">
+            <figure><img src="../assets/puntamita.jpg" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">Sayulita</h2>
+              <p>Suft, comodidad y compras.</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-neutral">Ver ahora</button>
+              </div>
+            </div>
+          </li>
+
+          <li class="card card-compact w-96 bg-base-100 shadow-md rounded-lg">
+            <figure><img src="../assets/puntamita.jpg" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">Sayulita</h2>
+              <p>Suft, comodidad y compras.</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-neutral">Ver ahora</button>
+              </div>
+            </div>
+          </li>
+
+
+
+        </ul>
+      </div>
     </section>
+
   </div>
+
+  <script type="text/javascript" src="./scripts/navbar.js">
+
+  </script>
+
 </body>
 
 </html>
